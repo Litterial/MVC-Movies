@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVcMovie.Models.Movie>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <div>
+        <!-- <li>@ViewData["ID"]</li>
+        <li>@ViewData["Name"]</li>
+        <li>@ViewData["Year"]</li>
+        <li>@ViewData["FullDate"]</li> -->
+        @if (Model.Count() < 1)
+        {
+            <h1>There are no movies available</h1>
+            
+        }
+
+        else
+        {
+            
+            @foreach(var movie in Model)
+            {
+                <li>@movie.ID</li>           
+                <li>@movie.Title</li> 
+                <li>@movie.Year</li> 
+                <li>@movie.ReleaseDate.ToString("MMMM d, yyyy")</li> 
+    
+            }
+        }
+    </div>
+</div>
