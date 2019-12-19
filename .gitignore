@@ -1,6 +1,6 @@
 .idea/
-MVcMovie.csproj
 bin/
 *.nupkg
 .vscode/
 obj/
+MVcMovie.db
