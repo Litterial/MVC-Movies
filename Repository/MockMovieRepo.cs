@@ -1,9 +1,12 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
-using MVcMovie.Data;
+using MVcMovie.Models;
+using MVcMovie.Data.MVcMovieContext;
+using MVcMovie.Repository.MovieRepo;
+using MVcMovie.Enumerations;
 
-namespace MVcMovie.Models
+namespace MVcMovie.Repository.MockMovieRepo
 {
     public class SQLMovieRepo : MovieRepository
     {
@@ -33,6 +36,17 @@ namespace MVcMovie.Models
             context.Movies.Add(movie);
             context.SaveChanges();
             return movie;
+        }
+
+        public IEnumerable <Genre> getGenres(){
+            var genreArray = new List <Genre>();
+            foreach(Genre genres in Enum.GetValues(typeof(Genre)))
+            {
+                genreArray.Add(genres);
+            }
+            return genreArray;
+
+
         }
     }
 }

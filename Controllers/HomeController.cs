@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MVcMovie.Models;
+using MVcMovie.Repository.MovieRepo;
+using MVcMovie.Models.ErrorViewModel;
+using MVcMovie.Enumerations;
 
 namespace MVcMovie.Controllers
 {
@@ -40,6 +43,7 @@ namespace MVcMovie.Controllers
 
         public IActionResult MovieForm()
         {
+            // var genres = _movieRepository.getGenres();
         
             return View();
         }

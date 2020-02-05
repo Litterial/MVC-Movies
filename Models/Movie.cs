@@ -1,5 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using MVcMovie.Enumerations;
+using MVcMovie.Validating;
 
 namespace MVcMovie.Models{
     public class Movie{ 
@@ -22,6 +24,8 @@ namespace MVcMovie.Models{
         [MovieYear]
         // [Compare ("ReleaseDate",ErrorMessage = "Years do not match.")]
         public int Year { get; set; }
+
+        public Genre Genre {get;set;}
 
        
 

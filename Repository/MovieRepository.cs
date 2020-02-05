@@ -1,11 +1,13 @@
 using System.Collections.Generic;
-
-namespace MVcMovie.Models
+using MVcMovie.Models;
+using MVcMovie.Enumerations;
+namespace MVcMovie.Repository.MovieRepo
 {
     public interface MovieRepository
     {
         Movie GetMovie (int Id);
         IEnumerable <Movie> GetAll();
         Movie addMovie(Movie movie);
-    }
+
+        IEnumerable<Genre> getGenres();    }
 }

@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using MVcMovie.Models;
 
-namespace MVcMovie.Validate.MovieValidation{
+namespace MVcMovie.Validating{
     public class MovieYearAttribute : ValidationAttribute
     {
         public MovieYearAttribute()

@@ -10,8 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using MVcMovie.Models;
-using MVcMovie.Data;
-
+using MVcMovie.Repository.MovieRepo;
+using MVcMovie.Repository.MockMovieRepo;
+using MVcMovie.Data.MVcMovieContext;
 namespace MVcMovie
 {
     public class Startup
